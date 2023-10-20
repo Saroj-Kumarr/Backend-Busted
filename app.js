@@ -1,4 +1,6 @@
-const fs=require('fs');
+const fs = require("fs");
+const os = require("os");
+const path=require('path');
 
 // *********************************************************************************************
 
@@ -32,7 +34,7 @@ const fs=require('fs');
 
 // fs.rmdirSync('saroj');
 
-// *********************************************************************************************
+//*********************************************************************************************
 
 // fs.mkdir('saroj',(err)=>{
 //     if(err){
@@ -42,11 +44,9 @@ const fs=require('fs');
 //     }
 // })
 
-
 // fs.writeFile('saroj/file.txt','This is my test file',()=>{
 //     console.log("File created and content is written successfully✅");
 // })
-
 
 // fs.appendFile('saroj/file.txt',"Appending the content ", ()=>{
 //     console.log("File appended successfully✅")
@@ -56,7 +56,6 @@ const fs=require('fs');
 //     console.log(data);
 // })
 
-
 // fs.unlink('saroj/file.txt',(err)=>{
 //     console.log("File is deleted ✅")
 // })
@@ -64,3 +63,29 @@ const fs=require('fs');
 // fs.rmdir('saroj',()=>{
 //     console.log("Folder is deleted ✅")
 // })
+
+// *********************************************************
+
+// OS modules
+
+// console.log(os.arch());
+
+// console.log(os.hostname());
+// console.log(os.platform());
+// console.log(os.tmpdir());
+
+// const freeMemory = os.freemem();
+
+// console.log(`${freeMemory / 1024 / 1024 / 1024}`);
+
+// const totalMemory = os.totalmem();
+
+// console.log(`${totalMemory / 1024 / 1024 / 1024}`);
+
+
+// const dirname=path.dirname('enter current path'); // it will give current dirname
+
+// const fileExtentionName=path.extname('current directory'); // it will give file extension name
+
+// const baseName=path.basename('current directory name') // it will give the current file name
+

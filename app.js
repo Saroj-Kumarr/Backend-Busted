@@ -8,6 +8,9 @@ const chalk = require("chalk");
 
 const validator = require("validator");
 
+const http = require("http");
+const server = http.createServer();
+
 // *********************************************************************************************
 
 // fs.writeFileSync("file.txt","Hii i am saroj kumar");
@@ -145,9 +148,7 @@ const validator = require("validator");
 
 // Event Modules in Nodejs
 
-
 // ********************************************************************************************
-
 
 // const EventEmitter = require("events");
 
@@ -164,9 +165,43 @@ const validator = require("validator");
 
 // event.emit("checkPage", 200, "ok");
 
+// *********************** Streaming Basic concepts
+
+server.on("request", (req, res) => {
+
+  // *************  1st Way 
+
+  // fs.readFile("input.txt", (err, data) => {
+  //   if (err) return console.log(err);
+  //   res.end(data.toString());
+  // });
+
+  
+const streamdata=fs.createReadStream('input.txt');
+
+// *************  2nd Way 
+
+// streamdata.on('data',(chunkdata)=>{
+//   res.write(chunkdata);
+// });
+
+// streamdata.on('end',()=>{
+//   res.end();
+// });
+
+// streamdata.on('error',(err)=>{
+//   console.log(err);
+//   res.end("File not found");
+// })
+
+streamdata.pipe(res)
+
+});
 
 
 
 
-
+server.listen(8000, () => {
+  console.log("server is started on 8000");
+});
 

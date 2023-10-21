@@ -113,8 +113,7 @@ const validator = require("validator");
 
 // console.log(chalk.red.inverse("Something went wrong"));
 
-
- // *******   Validator is good package for validating the email, alpha, alphanumeric and so on.
+// *******   Validator is good package for validating the email, alpha, alphanumeric and so on.
 
 // const res = validator.isEmail("saroj@gmail.com");
 
@@ -124,8 +123,50 @@ const validator = require("validator");
 
 // console.log(res ? chalk.green.inverse(res) : chalk.red.inverse(res));
 
-console.log("saroj kumar");
+// console.log("saroj kumar");
 
-console.log("nahi denge");
-console.log("nahi denge");
-console.log("nahi denge");
+//    Object to JSON and Vice-e-verse
+
+// const saroj = {
+//   name: "saroj kumar",
+//   reg: 12208785,
+//   course: "MCA",
+// };
+
+// console.log(saroj);
+
+// const jsonFormat = JSON.stringify(saroj);
+
+// console.log(jsonFormat);
+
+// const objectFormat = JSON.parse(jsonFormat);
+
+// console.log(objectFormat);
+
+// Event Modules in Nodejs
+
+
+// ********************************************************************************************
+
+
+// const EventEmitter = require("events");
+
+// const event = new EventEmitter();
+
+// event.on("checkPage", (statusCode, message) => {
+//   console.log(
+//     "This is the status code " +
+//       statusCode +
+//       " and This is the message " +
+//       message
+//   );
+// });
+
+// event.emit("checkPage", 200, "ok");
+
+
+
+
+
+
+

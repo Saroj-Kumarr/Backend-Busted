@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "http": "^0.0.1-security",
+    "validator": "^13.11.0"
+  }
+}

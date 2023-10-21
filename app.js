@@ -1,6 +1,12 @@
 const fs = require("fs");
 const os = require("os");
-const path=require('path');
+const path = require("path");
+
+const { add, sub, mul, div } = require("./UtilityFunction");
+
+const chalk = require("chalk");
+
+const validator = require("validator");
 
 // *********************************************************************************************
 
@@ -82,10 +88,44 @@ const path=require('path');
 
 // console.log(`${totalMemory / 1024 / 1024 / 1024}`);
 
-
 // const dirname=path.dirname('enter current path'); // it will give current dirname
 
 // const fileExtentionName=path.extname('current directory'); // it will give file extension name
 
 // const baseName=path.basename('current directory name') // it will give the current file name
 
+// const dirDetails=path.parse('C:/Users/stran/Desktop/Backend-Busted/saroj/app.js');
+
+// console.log(dirDetails);
+
+// console.log(dirDetails.root)
+// console.log(dirDetails.name)
+// console.log(dirDetails.ext)
+
+//  *************   Import and Export   ********************
+
+// console.log(add(10, 50));
+// console.log(sub(10, 5));
+// console.log(mul(10, 5));
+// console.log((div(20, 30)).toFixed(2));
+
+// console.log(chalk.green.underline.inverse("I am the green"));
+
+// console.log(chalk.red.inverse("Something went wrong"));
+
+
+ // *******   Validator is good package for validating the email, alpha, alphanumeric and so on.
+
+// const res = validator.isEmail("saroj@gmail.com");
+
+// const res = validator.isAlpha("slflsAdfjdslfnslajdf");
+
+// const res = validator.isAlphanumeric("1234567890sarojkumar");
+
+// console.log(res ? chalk.green.inverse(res) : chalk.red.inverse(res));
+
+console.log("saroj kumar");
+
+console.log("nahi denge");
+console.log("nahi denge");
+console.log("nahi denge");
